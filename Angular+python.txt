@@ -1,0 +1,59 @@
+ANGULAR+PYTHON:
+
+LIBRARIES: MIDDLEWARE, UVICORN,SQLAICHEMY,SQLLITE
+i USE DATABASE SQLLITE FOR MY COMPATABILITY. and UVICORN TO RUN THE APP.
+
+app.component.ts---> Main Logic File
+
+it contains Button click events
+Functions,API calls,variables, Form handling and Data binding.
+
+app.component.html---> UI part
+It contains, Html, buttons, Forms, Lists, Tables , Inputs
+
+app.component.css--> styling file
+app.component.spec.ts-->testing file
+
+app.module.ts-->Main app confi file without this file app cannot run.
+it tells angular, which component exist, which module to import and what service to use.
+
+index.html--> main html page
+
+main.ts-->angular startup file..it load frist Appcomponent.
+
+styles.css-->this css applies to the whole application.
+
+ng serve
+   │
+   ▼
+main.ts (entry point)
+   │
+   ▼
+app.module.ts (loads modules + components)
+   │
+   ▼
+index.html (contains <app-root>)
+   │
+   ▼
+AppComponent (app.component.ts executes)
+   │
+   ├── constructor()
+   └── ngOnInit() → calls backend API
+           │
+           ▼
+   FastAPI returns JSON
+           │
+           ▼
+Angular stores data in variables
+           │
+           ▼
+app.component.html renders data
+           │
+           ▼
+app.component.css styles UI
+
+
+
+finally
+Angular run:ng serve --open
+python run  venv(path of the Project) uvicorn main:app --reload
