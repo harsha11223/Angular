@@ -57,3 +57,12 @@ app.component.css styles UI
 finally
 Angular run:ng serve --open
 python run  venv(path of the Project) uvicorn main:app --reload
+
+Git:
+A folder with its own .git is always treated as an independent Git repo.
+
+Git will NOT upload files inside that folder unless you remove the internal .git.
+
+Always keep only one .git folder at the root of your main project.
+
+If you copy a project from another Git repo, delete its .git before adding it to your project.
