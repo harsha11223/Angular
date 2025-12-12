@@ -1,0 +1,15 @@
+<div style="margin: 80px;">
+  <h2 style="background-color: aqua; text-align:center; padding: 12px;">
+    Todo App
+  </h2>
+
+  <div style="margin-top: 20px;">
+    <input [(ngModel)]="newTask" placeholder="Enter task" />
+    <button (click)="addTask()">Add</button>
+  </div>
+
+  <div *ngFor="let item of tasks" style="margin-top: 15px;">
+    ♦ {{ item.task }}
+    <button (click)="deleteTask(item.id)">Delete</button>
+  </div>
+</div>
